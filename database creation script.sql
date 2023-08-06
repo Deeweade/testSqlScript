@@ -1,24 +1,26 @@
-CREATE DATABASE ProductsAndCategories;
+CREATE DATABASE ProductsAndCategories
+GO
 
-GO;
+USE ProductsAndCategories
+GO
 
 CREATE TABLE Products (
     Id INT PRIMARY KEY,
     Name VARCHAR(255) NOT NULL
-);
+)
 
-GO;
+GO
 
 CREATE TABLE Categories (
     Id INT PRIMARY KEY,
     Name VARCHAR(255) NOT NULL
-);
+)
 
-GO;
+GO
 
 CREATE TABLE ProductCategories (
     ProductId INT,
     CategoryId INT,
     FOREIGN KEY (ProductId) REFERENCES Products(Id),
     FOREIGN KEY (CategoryId) REFERENCES Categories(Id)
-);
+)
